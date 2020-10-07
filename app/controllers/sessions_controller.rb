@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
       # user created
     else
       # error
+      flash[:danger] = 'Invalid email/password combination'
       render 'new'
     end
   end
